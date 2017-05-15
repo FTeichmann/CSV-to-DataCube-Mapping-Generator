@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     git \
     maven \
     raptor-utils \
-    && apt-get -t jessie-backports install -y openjdk-8-jdk openjdk-8-jre openjdk-8-jdk-headless \
+    && apt-get -t jessie-backports install -y openjdk-8-jdk openjdk-8-jre openjdk-8-jdk-headless
 
 RUN set -ex \
     && update-java-alternatives --set java-1.8.0-openjdk-amd64 \
