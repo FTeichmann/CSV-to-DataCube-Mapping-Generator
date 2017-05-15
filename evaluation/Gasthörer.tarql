@@ -1,0 +1,105 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#>
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
+CONSTRUCT {
+<http://example.org/Gasthörer> 
+  dct:issued "5/5/2017"^^xsd:date ;
+  dct:generatedBy "DataCube Mapping Creator";
+  qb:structure <http://example.org/GasthörerStructure> ;
+   <http://example.org/Source> " Wiesbaden 2016" ;
+  a qb:DataSet .
+<http://example.org/GasthörerStructure>
+  qb:attribute sdmx-attribute:unitMeasure ;
+  qb:componentAttachment qb:DataSet ;
+  a qb:DataStructureDefinition .
+<http://example.org/GasthörerStructurecomponent1> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://example.org/Semester> ;
+  qb:dimension <http://example.org/Semester> . 
+<http://example.org/GasthörerStructurecomponent2> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://example.org/FieldOfStudy> ;
+  qb:dimension <http://example.org/FieldOfStudy> . 
+<http://example.org/GasthörerStructurecomponent3> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://example.org/NumberOfStudents> ;
+  qb:measure <http://example.org/NumberOfStudents> ;
+  qb:componentRequired "true"^^xsd:boolean .
+<http://example.org/GasthörerStructure> qb:component <http://example.org/GasthörerStructurecomponent1> .
+<http://example.org/GasthörerStructure> qb:component <http://example.org/GasthörerStructurecomponent2> .
+<http://example.org/GasthörerStructure> qb:component <http://example.org/GasthörerStructurecomponent3> .
+<http://example.org/NumberOfStudents>
+  a qb:MeasureProperty, rdf:Property ;
+  rdfs:subPropertyOf sdmx-measure:obsValue .
+<http://example.org/Semester>
+  a qb:DimensionProperty, rdf:Property ;
+  rdfs:range <http://example.org/Semester/range> .
+<http://example.org/FieldOfStudy>
+  a qb:DimensionProperty, rdf:Property ;
+  rdfs:range <http://example.org/FieldOfStudy/range> .
+?placeholder1
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2007/08";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?b.
+?placeholder2
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2008/09";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?c.
+?placeholder3
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2009/10";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?d.
+?placeholder4
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2010/11";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?e.
+?placeholder5
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2011/12";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?f.
+?placeholder6
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2012/13";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?g.
+?placeholder7
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2013/14";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?h.
+?placeholder8
+  qb:dataSet <http://example.org/Gasthörer> ;
+  a qb:observation; 
+  <http://example.org/Semester> "WT 2014/15";
+  <http://example.org/FieldOfStudy> ?a;
+  <http://example.org/NumberOfStudents> ?i.
+} 
+ FROM <FILEPLACEHOLDER> 
+WHERE {
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2007/08','_',?a)) as ?placeholder1)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2008/09','_',?a)) as ?placeholder2)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2009/10','_',?a)) as ?placeholder3)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2010/11','_',?a)) as ?placeholder4)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2011/12','_',?a)) as ?placeholder5)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2012/13','_',?a)) as ?placeholder6)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2013/14','_',?a)) as ?placeholder7)
+BIND( URI(CONCAT('http://example.org/Gasthörer/Observation/','WT 2014/15','_',?a)) as ?placeholder8)
+  FILTER(BOUND(?b) && BOUND(?c) && BOUND(?d) && BOUND(?e) && BOUND(?f) && BOUND(?g) && BOUND(?h) && BOUND(?i) && BOUND(?a))
+}
+OFFSET 0

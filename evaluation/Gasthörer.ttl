@@ -1,0 +1,666 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+
+<http://example.org/FieldOfStudy>
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:range <http://example.org/FieldOfStudy/range> .
+
+<http://example.org/Gasth%C3%B6rer>
+    <http://example.org/Source> " Wiesbaden 2016" ;
+    dct:generatedBy "DataCube Mapping Creator" ;
+    dct:issued "5/5/2017"^^xsd:date ;
+    qb:structure <http://example.org/Gasth%C3%B6rerStructure> ;
+    a qb:DataSet .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "88" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2377" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "1011" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "204" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "8041" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "14511" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2692" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "7671" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "613" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "38445" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202007/08_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "1" ;
+    <http://example.org/Semester> "WT 2007/08" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "63" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2148" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "991" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "229" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "8939" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "13329" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2710" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "7579" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "663" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "36860" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202008/09_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "1" ;
+    <http://example.org/Semester> "WT 2008/09" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "49" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2234" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "1151" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "240" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "9513" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "13605" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2663" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "9429" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "537" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "41877" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202009/10_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "1" ;
+    <http://example.org/Semester> "WT 2009/10" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "65" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2222" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "1194" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "396" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "9122" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "12780" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "3369" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "8492" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "565" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "38640" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202010/11_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "-" ;
+    <http://example.org/Semester> "WT 2010/11" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "65" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2902" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "969" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "829" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "11258" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "11709" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2913" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "7348" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "555" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "34625" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202011/12_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "-" ;
+    <http://example.org/Semester> "WT 2011/12" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "74" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2667" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "899" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "883" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "9333" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "12374" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2801" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "6454" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "767" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "33574" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202012/13_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "-" ;
+    <http://example.org/Semester> "WT 2012/13" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "79" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2122" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "780" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "891" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "7673" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "12139" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2556" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "7611" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "272" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "33959" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202013/14_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "-" ;
+    <http://example.org/Semester> "WT 2013/14" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Agricultural>
+    <http://example.org/FieldOfStudy> "Agricultural" ;
+    <http://example.org/NumberOfStudents> "92" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Art>
+    <http://example.org/FieldOfStudy> "Art" ;
+    <http://example.org/NumberOfStudents> "2220" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Engineering%20Sciences>
+    <http://example.org/FieldOfStudy> "Engineering Sciences" ;
+    <http://example.org/NumberOfStudents> "931" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Human%20Medicine/Health%20Science>
+    <http://example.org/FieldOfStudy> "Human Medicine/Health Science" ;
+    <http://example.org/NumberOfStudents> "922" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Law>
+    <http://example.org/FieldOfStudy> "Law" ;
+    <http://example.org/NumberOfStudents> "7440" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Linguistics%20and%20Cultural%20Studies>
+    <http://example.org/FieldOfStudy> "Linguistics and Cultural Studies" ;
+    <http://example.org/NumberOfStudents> "12268" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Mathematics>
+    <http://example.org/FieldOfStudy> "Mathematics" ;
+    <http://example.org/NumberOfStudents> "2707" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Other%20fields%20of%20study>
+    <http://example.org/FieldOfStudy> "Other fields of study" ;
+    <http://example.org/NumberOfStudents> "7244" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Sports>
+    <http://example.org/FieldOfStudy> "Sports" ;
+    <http://example.org/NumberOfStudents> "393" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Total>
+    <http://example.org/FieldOfStudy> "Total" ;
+    <http://example.org/NumberOfStudents> "33644" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rer/Observation/WT%202014/15_Veterinary%20Medicine>
+    <http://example.org/FieldOfStudy> "Veterinary Medicine" ;
+    <http://example.org/NumberOfStudents> "-" ;
+    <http://example.org/Semester> "WT 2014/15" ;
+    qb:dataSet <http://example.org/Gasth%C3%B6rer> ;
+    a qb:observation .
+
+<http://example.org/Gasth%C3%B6rerStructure>
+    qb:attribute sdmx-attribute:unitMeasure ;
+    qb:component <http://example.org/Gasth%C3%B6rerStructurecomponent1>, <http://example.org/Gasth%C3%B6rerStructurecomponent2>, <http://example.org/Gasth%C3%B6rerStructurecomponent3> ;
+    qb:componentAttachment qb:DataSet ;
+    a qb:DataStructureDefinition .
+
+<http://example.org/Gasth%C3%B6rerStructurecomponent1>
+    qb:componentProperty <http://example.org/Semester> ;
+    qb:dimension <http://example.org/Semester> ;
+    a qb:ComponentSpecification .
+
+<http://example.org/Gasth%C3%B6rerStructurecomponent2>
+    qb:componentProperty <http://example.org/FieldOfStudy> ;
+    qb:dimension <http://example.org/FieldOfStudy> ;
+    a qb:ComponentSpecification .
+
+<http://example.org/Gasth%C3%B6rerStructurecomponent3>
+    qb:componentProperty <http://example.org/NumberOfStudents> ;
+    qb:componentRequired true ;
+    qb:measure <http://example.org/NumberOfStudents> ;
+    a qb:ComponentSpecification .
+
+<http://example.org/NumberOfStudents>
+    a qb:MeasureProperty, rdf:Property ;
+    rdfs:subPropertyOf sdmx-measure:obsValue .
+
+<http://example.org/Semester>
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:range <http://example.org/Semester/range> .
+
+

@@ -1,0 +1,80 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#>
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
+CONSTRUCT {
+<http://aksw.org/inventory> 
+  dct:issued "5/5/2017"^^xsd:date ;
+  dct:generatedBy "DataCube Mapping Creator";
+  qb:structure <http://aksw.org/inventoryStructure> ;
+   <http://aksw.org/yearOfStocktake> "2017" ;
+   <http://aksw.org/monthOfStocktake> "january" ;
+   <http://aksw.org/Floor> "first floor" ;
+   <http://aksw.org/Building> "Augusteum" ;
+  a qb:DataSet .
+<http://aksw.org/inventoryStructure>
+  qb:attribute sdmx-attribute:unitMeasure ;
+  qb:componentAttachment qb:DataSet ;
+  a qb:DataStructureDefinition .
+<http://aksw.org/inventoryStructurecomponent1> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://aksw.org/inventory/position> ;
+  qb:dimension <http://aksw.org/inventory/position> . 
+<http://aksw.org/inventoryStructurecomponent2> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://aksw.org/inventory/roomnumber> ;
+  qb:dimension <http://aksw.org/inventory/roomnumber> . 
+<http://aksw.org/inventoryStructurecomponent3> 
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://aksw.org/NumberOfItems> ;
+  qb:measure <http://aksw.org/NumberOfItems> ;
+  qb:componentRequired "true"^^xsd:boolean .
+<http://aksw.org/inventoryStructure> qb:component <http://aksw.org/inventoryStructurecomponent1> .
+<http://aksw.org/inventoryStructure> qb:component <http://aksw.org/inventoryStructurecomponent2> .
+<http://aksw.org/inventoryStructure> qb:component <http://aksw.org/inventoryStructurecomponent3> .
+<http://aksw.org/NumberOfItems>
+  a qb:MeasureProperty, rdf:Property ;
+  rdfs:subPropertyOf sdmx-measure:obsValue .
+<http://aksw.org/inventory/position>
+  a qb:DimensionProperty, rdf:Property ;
+  rdfs:range <http://aksw.org/inventory/position/range> .
+<http://aksw.org/inventory/roomnumber>
+  a qb:DimensionProperty, rdf:Property ;
+  rdfs:range <http://aksw.org/inventory/roomnumber/range> .
+?placeholder1
+  qb:dataSet <http://aksw.org/inventory> ;
+  a qb:observation; 
+  <http://aksw.org/inventory/position> "desks";
+  <http://aksw.org/inventory/roomnumber> ?a;
+  <http://aksw.org/NumberOfItems> ?b.
+?placeholder2
+  qb:dataSet <http://aksw.org/inventory> ;
+  a qb:observation; 
+  <http://aksw.org/inventory/position> "chairs";
+  <http://aksw.org/inventory/roomnumber> ?a;
+  <http://aksw.org/NumberOfItems> ?c.
+?placeholder3
+  qb:dataSet <http://aksw.org/inventory> ;
+  a qb:observation; 
+  <http://aksw.org/inventory/position> "monitors";
+  <http://aksw.org/inventory/roomnumber> ?a;
+  <http://aksw.org/NumberOfItems> ?d.
+?placeholder4
+  qb:dataSet <http://aksw.org/inventory> ;
+  a qb:observation; 
+  <http://aksw.org/inventory/position> "plants";
+  <http://aksw.org/inventory/roomnumber> ?a;
+  <http://aksw.org/NumberOfItems> ?e.
+} 
+ FROM <FILEPLACEHOLDER> 
+WHERE {
+BIND( URI(CONCAT('http://aksw.org/InventoryEntry/','desks','_',?a)) as ?placeholder1)
+BIND( URI(CONCAT('http://aksw.org/InventoryEntry/','chairs','_',?a)) as ?placeholder2)
+BIND( URI(CONCAT('http://aksw.org/InventoryEntry/','monitors','_',?a)) as ?placeholder3)
+BIND( URI(CONCAT('http://aksw.org/InventoryEntry/','plants','_',?a)) as ?placeholder4)
+  FILTER(BOUND(?b) && BOUND(?c) && BOUND(?d) && BOUND(?e) && BOUND(?a))
+}
+OFFSET 2

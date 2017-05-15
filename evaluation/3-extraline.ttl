@@ -1,0 +1,165 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+
+<http://aksw.org/InventoryEntry/chairs_A110>
+    <http://aksw.org/NumberOfItems> "3" ;
+    <http://aksw.org/inventory/position> "chairs" ;
+    <http://aksw.org/inventory/roomnumber> "A110" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/chairs_A112>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "chairs" ;
+    <http://aksw.org/inventory/roomnumber> "A112" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/chairs_A114>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "chairs" ;
+    <http://aksw.org/inventory/roomnumber> "A114" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/chairs_A116>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "chairs" ;
+    <http://aksw.org/inventory/roomnumber> "A116" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/desks_A110>
+    <http://aksw.org/NumberOfItems> "3" ;
+    <http://aksw.org/inventory/position> "desks" ;
+    <http://aksw.org/inventory/roomnumber> "A110" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/desks_A112>
+    <http://aksw.org/NumberOfItems> "3" ;
+    <http://aksw.org/inventory/position> "desks" ;
+    <http://aksw.org/inventory/roomnumber> "A112" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/desks_A114>
+    <http://aksw.org/NumberOfItems> "3" ;
+    <http://aksw.org/inventory/position> "desks" ;
+    <http://aksw.org/inventory/roomnumber> "A114" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/desks_A116>
+    <http://aksw.org/NumberOfItems> "3" ;
+    <http://aksw.org/inventory/position> "desks" ;
+    <http://aksw.org/inventory/roomnumber> "A116" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/monitors_A110>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "monitors" ;
+    <http://aksw.org/inventory/roomnumber> "A110" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/monitors_A112>
+    <http://aksw.org/NumberOfItems> "4" ;
+    <http://aksw.org/inventory/position> "monitors" ;
+    <http://aksw.org/inventory/roomnumber> "A112" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/monitors_A114>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "monitors" ;
+    <http://aksw.org/inventory/roomnumber> "A114" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/monitors_A116>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "monitors" ;
+    <http://aksw.org/inventory/roomnumber> "A116" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/plants_A110>
+    <http://aksw.org/NumberOfItems> "2" ;
+    <http://aksw.org/inventory/position> "plants" ;
+    <http://aksw.org/inventory/roomnumber> "A110" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/plants_A112>
+    <http://aksw.org/NumberOfItems> "6" ;
+    <http://aksw.org/inventory/position> "plants" ;
+    <http://aksw.org/inventory/roomnumber> "A112" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/plants_A114>
+    <http://aksw.org/NumberOfItems> "1" ;
+    <http://aksw.org/inventory/position> "plants" ;
+    <http://aksw.org/inventory/roomnumber> "A114" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/InventoryEntry/plants_A116>
+    <http://aksw.org/NumberOfItems> "1" ;
+    <http://aksw.org/inventory/position> "plants" ;
+    <http://aksw.org/inventory/roomnumber> "A116" ;
+    qb:dataSet <http://aksw.org/inventory> ;
+    a qb:observation .
+
+<http://aksw.org/NumberOfItems>
+    a qb:MeasureProperty, rdf:Property ;
+    rdfs:subPropertyOf sdmx-measure:obsValue .
+
+<http://aksw.org/inventory>
+    <http://aksw.org/Building> "Augusteum" ;
+    <http://aksw.org/Floor> "first floor" ;
+    <http://aksw.org/monthOfStocktake> "january" ;
+    <http://aksw.org/yearOfStocktake> "2017" ;
+    dct:generatedBy "DataCube Mapping Creator" ;
+    dct:issued "5/5/2017"^^xsd:date ;
+    qb:structure <http://aksw.org/inventoryStructure> ;
+    a qb:DataSet .
+
+<http://aksw.org/inventory/position>
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:range <http://aksw.org/inventory/position/range> .
+
+<http://aksw.org/inventory/roomnumber>
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:range <http://aksw.org/inventory/roomnumber/range> .
+
+<http://aksw.org/inventoryStructure>
+    qb:attribute sdmx-attribute:unitMeasure ;
+    qb:component <http://aksw.org/inventoryStructurecomponent1>, <http://aksw.org/inventoryStructurecomponent2>, <http://aksw.org/inventoryStructurecomponent3> ;
+    qb:componentAttachment qb:DataSet ;
+    a qb:DataStructureDefinition .
+
+<http://aksw.org/inventoryStructurecomponent1>
+    qb:componentProperty <http://aksw.org/inventory/position> ;
+    qb:dimension <http://aksw.org/inventory/position> ;
+    a qb:ComponentSpecification .
+
+<http://aksw.org/inventoryStructurecomponent2>
+    qb:componentProperty <http://aksw.org/inventory/roomnumber> ;
+    qb:dimension <http://aksw.org/inventory/roomnumber> ;
+    a qb:ComponentSpecification .
+
+<http://aksw.org/inventoryStructurecomponent3>
+    qb:componentProperty <http://aksw.org/NumberOfItems> ;
+    qb:componentRequired true ;
+    qb:measure <http://aksw.org/NumberOfItems> ;
+    a qb:ComponentSpecification .
+
+

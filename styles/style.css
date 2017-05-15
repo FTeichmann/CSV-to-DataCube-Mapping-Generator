@@ -1,0 +1,12 @@
+.container-root {
+    margin-top: 90px;
+}
+.dimensionCell {
+    color: white;
+}
+.dimensionCellSelector{
+    color:white;
+}
+.form-control{
+cursor: pointer;
+}

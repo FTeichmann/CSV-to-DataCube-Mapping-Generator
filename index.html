@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap-theme.min.css">
+
+    <title>DataCube MappingGenerator</title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">DataCube MappingGenerator</a>
+            </div>
+            <div class="alert alert-danger navbar-text navbar-right" role="alert" id="messagefield">
+                <div> Please upload CSV by selecting a file or pasting Data.</div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container-fluid container-root">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        DataSources
+                    </div>
+                    <div class="panel-body">
+                        <form action="#" enctype="multipart/form-data" method="post">
+                            <div class="form-group">
+                                <label for="file_upload">CSV Source File*:</label>
+                                <input class="form-control" type="file" id="file_upload" name="file_upload" accept="text/csv text/comma-separated-values" />
+                            </div>
+                            <div class="form-group">
+                                <label for="csvFileArea">CSV Content:</label>
+                                <textarea class="form-control" name="csvFileArea" id="csvFileArea" rows="5" cols="30"></textarea>
+                                    <label for="delimiter">Delimiter</label>
+                                    <textarea class="form-control" name="delimiter" id="delimiter" rows="1" cols="1">,</textarea>
+                                    <label for="quotechar">Quotechar</label>
+                                    <textarea class="form-control" name="quotechar" id="quotechar" rows="1" cols="1">"</textarea>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="...">
+                                <input type="button" class="btn btn-default" id="upload" name="upload" value="load CSV content">
+                                <input type="button" class="btn btn-default" id="loadExample" name"loadExample" value="load example">
+                                <input type="button" class="btn btn-default" id="loadDefault" name"loadDefault" value="load default values">
+                            </div>
+                                <p>A maximum of 702 columns are currently supported. Only the first 25 rows are loaded into the table display.</p>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                Table Display
+                            </div>
+                            <div class="panel-body">
+                                <div style="position: relative; overflow: auto; width: 100%; height: 100%;" id="tableDisplay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Metadata Configuration
+                            </div>
+                            <div class="panel-body" id="cubeFormular">
+                                <form action="#" enctype="multipart/form-data" method="post">
+                                    <div class="form-group">
+                                        <label for="DataSetUri">DataSet Subject URI</label>
+                                        <input class="form-control" id="DataSetUri" size="40" type="text" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="DataStructureDefinitionUri">DataStructureDefinition Subject URI</label>
+                                        <input class="form-control" id="DataStructureDefinitionUri" size="40" type="text" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="MeasureUri">Measure Subject URI</label>
+                                        <input class="form-control" id="MeasureUri" size="40" type="text" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ObservationUri">Observation Subject Base URI</label>
+                                        <input class="form-control" id="ObservationUri" size="40" type="text" value="" />
+                                    </div>
+                                    <label for="dimensionsArea">Dimensions</label>
+                                    <div id="dimensionsArea" class="form-group">
+                                        <div id = "dimensions"></div>
+                                    </div>
+                                    <label for="staticFields">Static Fields (optional)</label>
+                                    <div id="staticFieldsGroup" class="form-group">
+                                        <div id = "staticFields"></div>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <input type="button" class="btn btn-default" name="dimensionAdd" id="dimensionAdd" value="add dimension">
+                                        <input type="button" class="btn btn-default" name="addStaticField" id="addStaticField" value="add static field">
+                                        <input type="button" class="btn btn-default" name="saveMetadata" id="saveMetadata" value="validate input"></br>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                Mapping Generation
+                            </div>
+                            <div class="panel-body">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <input type="button" class="btn btn-default" name="generateTarqlMapping" id="generateTarqlMapping" value="generate Tarql mapping">
+                                    <input type="button" class="btn btn-default" name="loadTarqlMapping" id="loadTarqlMapping" value="load Tarql mapping">
+                                </div>
+                            </br>
+                            <textarea name="tarqlMapping" id="tarqlMapping" rows="25" cols="90"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Data Conversion
+                    </div>
+                    <div class="panel-body">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <input type="button" class="btn btn-default" name="convertTarql" id="convertTarql" value="generate DataCube">
+                            <input type="button" class="btn btn-default" name="loadDataCube" id="loadDataCube" value="load DataCube">
+                        </div>
+                    </br>
+                    <textarea name="dataCube" id="dataCube" rows="25" cols="70"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    DataCube Validation
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <input type="button" class="btn btn-default" name="validateDataCube" id="validateDataCube" value="validate DataCube">
+                    </div>
+                </br>
+                <textarea name="validationResult" id="validationResult" rows="25" cols="40"></textarea>
+                </div>
+            </div>
+        </div>
+            </div>
+    </div>
+    </div>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/events.js"></script>
+    <script src="./scripts/metaDataGatherer.js"></script>
+    <script src="./scripts/tarqlModule.js"></script>
+    <script src="./scripts/uploader.js"></script>
+    <script src="./scripts/config.js"></script>
+    <script src="./scripts/functions.js"></script>
+</body>
+</html>
