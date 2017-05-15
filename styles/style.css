@@ -10,3 +10,6 @@
 .form-control{
 cursor: pointer;
 }
+textarea {
+max-width: 100%;
+}

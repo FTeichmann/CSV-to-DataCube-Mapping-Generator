@@ -10,7 +10,7 @@ if(isset($_GET['action'])){
         //parse the data to Rows
         $Rows = str_getcsv($_POST['csvData'],"\n",$_POST['quotechar']);
         //parsing only the first 25 Rows
-        for($i = 0; $i < 25 && $i < sizeof($Rows); $i++){
+        for($i = 0; $i < 1000 && $i < sizeof($Rows); $i++){
             array_push($response,str_getcsv($Rows[$i],$_POST['delimiter'],$_POST['quotechar']));
         }
     }
